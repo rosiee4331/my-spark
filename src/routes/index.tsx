@@ -354,9 +354,6 @@ function Footer() {
           <a href={`mailto:${portfolio.email}`} className="hover:text-primary transition">
             Email
           </a>
-          <a href={portfolio.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary transition">
-            LinkedIn
-          </a>
         </div>
       </div>
     </footer>
