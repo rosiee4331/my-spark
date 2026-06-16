@@ -3,7 +3,7 @@
 // ============================================================
 
 export const portfolio = {
-  name: "Your Name",
+  name: "Roseanne Habolin",
   role: "IT Support & Computer Systems Servicing Specialist",
   subheadline:
     "Currently training in hardware assembly, network configuration, and system server deployment.",
