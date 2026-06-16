@@ -260,7 +260,6 @@ function Contact() {
                 rel="noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition"
               >
-                <LinkedInIcon />
                 <span><br /></span>
               </a>
             </div>
