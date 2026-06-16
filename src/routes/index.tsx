@@ -94,7 +94,7 @@ function Hero() {
 
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
           Hi, I'm{" "}
-          <span className="text-primary text-glow">{portfolio.name}</span>,
+          <span className="text-primary text-glow">Roseanne</span>,
           <br />
           an IT Support &amp;{" "}
           <span className="relative inline-block">
