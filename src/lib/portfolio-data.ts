@@ -7,7 +7,7 @@ export const portfolio = {
   role: "IT Support & Computer Systems Servicing Specialist",
   subheadline:
     "Currently training in hardware assembly, network configuration, and system server deployment.",
-  email: "you@example.com",
+  email: "roseanne.habolin@rotaryclubmakati.org",
   linkedin: "https://linkedin.com/in/your-handle",
   location: "Available for on-site & remote support",
 

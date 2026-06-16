@@ -261,7 +261,7 @@ function Contact() {
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition"
               >
                 <LinkedInIcon />
-                <span>LinkedIn</span>
+                <span><br /></span>
               </a>
             </div>
           </div>
