@@ -423,6 +423,45 @@ function Resume() {
       </div>
     </section>
   );
+function AILearnings() {
+  const insights = [
+    {
+      title: "Prompting Techniques",
+      body: "I learned about good prompting techniques that help get better results than simply asking for basic answers. Crafting clear, specific prompts leads to far more useful AI responses.",
+    },
+    {
+      title: "AI Ethics",
+      body: "I learned the ethics that should be observed while using AI tools — respecting the data privacy of others, being transparent, ensuring accuracy and reliability, and avoiding the misuse of AI.",
+    },
+    {
+      title: "Prompt Frameworks",
+      body: "I learned different formats and frameworks for making good prompts, like APE, CORE, CREATE, and more. Through these frameworks, I can now get great results from the prompts I use.",
+    },
+    {
+      title: "AI & the Future of Work",
+      body: "I also learned that AI doesn't really replace jobs — it upgrades each job we have, making our workplace and the work itself better and more efficient. We must not have the misconception that AI is a threat, because it's here to help us do our jobs properly.",
+    },
+  ];
+
+  return (
+    <section id="ai-learnings" className="relative py-24 md:py-32 border-t border-border">
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeader index="04" title="What I Learned About AI" subtitle="// key takeaways from my training" />
+
+        <div className="mt-16 grid gap-6 md:grid-cols-2">
+          {insights.map((item) => (
+            <article
+              key={item.title}
+              className="rounded-xl border border-border bg-card p-7 transition hover:border-primary hover:-translate-y-1 duration-300"
+            >
+              <h3 className="text-lg font-bold leading-tight mb-3">{item.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{item.body}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 
