@@ -423,6 +423,8 @@ function Resume() {
       </div>
     </section>
   );
+}
+
 function AILearnings() {
   const insights = [
     {
