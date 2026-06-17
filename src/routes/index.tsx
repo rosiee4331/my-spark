@@ -42,6 +42,7 @@ function Index() {
       <Hero />
       <Skills />
       <Experience />
+      <Resume />
       <Contact />
       <Footer />
     </div>
