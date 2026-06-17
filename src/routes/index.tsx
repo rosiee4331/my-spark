@@ -292,6 +292,139 @@ function Contact() {
   );
 }
 
+function Resume() {
+  const schools = [
+    {
+      title: "Basic Driving NC II",
+      org: "Sisters of Mary of Bannuex, Inc.",
+      points: [
+        "Learned proper vehicle operation and basic maintenance",
+        "Practiced safe driving techniques and traffic rules compliance",
+        "Trained in defensive driving and safe vehicle handling",
+        "Applied road safety and emergency procedures during driving exercises",
+      ],
+    },
+    {
+      title: "Computer System Servicing NC II",
+      org: "Sisters of Mary of Bannuex, Inc.",
+      points: [
+        "Helped install software and update applications",
+        "Organized computer cables and peripherals",
+        "Performed computer assembly and disassembly",
+        "Created and tested LAN cables",
+        "Developed basic networking and hardware skills",
+      ],
+    },
+    {
+      title: "Artificial Intelligence Training",
+      org: "Bonifacio Global City, Makati",
+      points: [
+        "Applied basic AI tools and technologies in training activities",
+        "Developed problem-solving and analytical skills",
+        "Assisted in data handling and research tasks",
+        "Demonstrated teamwork, communication, and adaptability",
+      ],
+    },
+  ];
+
+  const achievements = [
+    "With Honors from Kindergarten to G11",
+    "Panlalawigan Mind Challenge — Dance for the Environment (2nd Place)",
+    "Best in Korean Drummer (Grade 10 Moving-Up)",
+    "Ms. Intramurals 2022 — Best in Ramp, Best in Production Number",
+    "Ms. International 2021 — Grade 7 acquaintance party",
+    "Radio broadcasting competition — Technical Support (1st Place)",
+  ];
+
+  const academic = [
+    { school: "Sisters of Mary of Bannuex, Inc.", level: "Senior High School", period: "Current" },
+    { school: "Sisters of Mary of Bannuex, Inc.", level: "Junior High School", period: "August 2021 – December 2025" },
+  ];
+
+  const references = [
+    { role: "School Principal", name: "Sr. Mylene B. Arambulo, SM." },
+    { role: "Sister-In-Charge", name: "Sr. Lea Gonzaga, SM." },
+  ];
+
+  return (
+    <section id="resume" className="relative py-24 md:py-32 border-t border-border">
+      <div className="mx-auto max-w-6xl px-6">
+        <SectionHeader index="03" title="Resume" subtitle="// roseanne joy g. habolin — ai trainee" />
+
+        <div className="mt-12 rounded-xl border border-border bg-card p-6 md:p-8">
+          <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
+            Enthusiastic senior high school student with a strong interest in artificial
+            intelligence and emerging technologies. Eager to apply classroom knowledge in
+            programming, data analysis, and problem-solving to real-world AI projects.
+            Quick learner, detail-oriented, and motivated to contribute to innovative
+            solutions while gaining hands-on experience in the field.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {schools.map((s) => (
+            <article key={s.title} className="rounded-xl border border-border bg-card p-6">
+              <div className="font-mono text-xs text-primary mb-1">// training</div>
+              <h3 className="text-lg font-bold leading-tight">{s.title}</h3>
+              <div className="mt-1 font-mono text-xs text-muted-foreground">{s.org}</div>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                {s.points.map((p) => (
+                  <li key={p} className="flex gap-2">
+                    <span className="text-primary mt-1">▸</span>
+                    <span>{p}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="rounded-xl border border-border bg-card p-6">
+            <div className="font-mono text-xs text-primary mb-2">// achievements</div>
+            <h3 className="text-xl font-bold mb-4">Highlights</h3>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+              {achievements.map((a) => (
+                <li key={a} className="flex gap-2">
+                  <span className="text-primary mt-1">★</span>
+                  <span>{a}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="rounded-xl border border-border bg-card p-6">
+            <div className="font-mono text-xs text-primary mb-2">// academic data</div>
+            <h3 className="text-xl font-bold mb-4">Education</h3>
+            <ul className="space-y-4 text-sm">
+              {academic.map((a) => (
+                <li key={a.level} className="border-l-2 border-primary pl-4">
+                  <div className="font-semibold">{a.level}</div>
+                  <div className="text-muted-foreground">{a.school}</div>
+                  <div className="font-mono text-xs text-primary mt-1">{a.period}</div>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-6 pt-6 border-t border-border">
+              <div className="font-mono text-xs text-primary mb-2">// references</div>
+              <ul className="space-y-3 text-sm">
+                {references.map((r) => (
+                  <li key={r.name}>
+                    <div className="font-semibold">{r.name}</div>
+                    <div className="text-muted-foreground">{r.role}</div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 function Field({
   label,
   name,
