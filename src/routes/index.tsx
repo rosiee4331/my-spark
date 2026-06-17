@@ -211,7 +211,7 @@ function Experience() {
                 <div className="mt-5 flex flex-wrap gap-2">
                   {c.stack.map((s) => (
                     <span key={s} className="font-mono text-[11px] text-primary">
-                      {s === "Linux" ? <br /> : `[${s}]`}
+                      {`[${s}]`}
                     </span>
                   ))}
                 </div>
@@ -255,14 +255,6 @@ function Contact() {
               >
                 <MailIcon />
                 <span>{portfolio.email}</span>
-              </a>
-              <a
-                href={portfolio.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition"
-              >
-                <span><br /></span>
               </a>
             </div>
           </div>
