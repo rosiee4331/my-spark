@@ -256,14 +256,6 @@ function Contact() {
                 <MailIcon />
                 <span>{portfolio.email}</span>
               </a>
-              <a
-                href={portfolio.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition"
-              >
-                <span><br /></span>
-              </a>
             </div>
           </div>
 
