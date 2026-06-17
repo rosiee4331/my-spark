@@ -43,6 +43,7 @@ function Index() {
       <Skills />
       <Experience />
       <Resume />
+      <AILearnings />
       <Contact />
       <Footer />
     </div>
