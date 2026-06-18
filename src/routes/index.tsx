@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { portfolio } from "@/lib/portfolio-data";
+import { SparklesBackground } from "@/components/SparklesBackground";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -38,6 +39,7 @@ function useTheme() {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SparklesBackground />
       <Nav />
       <Hero />
       <Skills />
