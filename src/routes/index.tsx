@@ -39,6 +39,7 @@ function useTheme() {
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
+      <SparklesBackground />
       <Nav />
       <Hero />
       <Skills />
