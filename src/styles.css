@@ -150,3 +150,13 @@
 @utility cursor-blink {
   animation: blink 1s steps(2) infinite;
 }
+
+@keyframes sparkle-twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.8) rotate(0deg); }
+  50% { opacity: 0.7; transform: scale(1.2) rotate(45deg); }
+}
+
+@keyframes sparkle-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(180deg); }
+}
