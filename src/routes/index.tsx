@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { portfolio } from "@/lib/portfolio-data";
 import { SparklesBackground } from "@/components/SparklesBackground";
-import photoAsset from "@/assets/roseanne-photo.png.asset.json";
+import photoAsset from "@/assets/roseanne-photo-transparent.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -94,7 +94,7 @@ function Hero() {
             <div className="relative group">
               <div className="absolute -inset-3 rounded-2xl bg-primary/25 blur-2xl opacity-60 group-hover:opacity-80 transition" />
               <img
-                src={photoAsset.url}
+                src={photoAsset}
                 alt="Roseanne Joy G. Habolin"
                 className="relative w-56 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl"
               />
