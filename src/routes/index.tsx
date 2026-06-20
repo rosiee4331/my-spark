@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { portfolio } from "@/lib/portfolio-data";
 import { SparklesBackground } from "@/components/SparklesBackground";
+import photoAsset from "@/assets/roseanne-photo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -87,52 +88,69 @@ function Hero() {
       <div className="absolute bottom-0 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-32 md:pt-32 md:pb-40">
-        <div className="font-mono text-xs text-primary mb-6 flex items-center gap-2">
-          <span className="h-2 w-2 rounded-full bg-primary glow" />
-          <span>STATUS: AVAILABLE FOR DEPLOYMENT</span>
-        </div>
+        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          {/* Photo */}
+          <div className="shrink-0 order-1 md:order-2">
+            <div className="relative group">
+              <div className="absolute -inset-3 rounded-2xl bg-primary/25 blur-2xl opacity-60 group-hover:opacity-80 transition" />
+              <img
+                src={photoAsset.url}
+                alt="Roseanne Joy G. Habolin"
+                className="relative w-56 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl"
+              />
+            </div>
+          </div>
 
-        <p className="font-mono text-sm text-muted-foreground mb-4">
-          <span className="text-primary">$</span> whoami
-        </p>
+          {/* Text */}
+          <div className="flex-1 order-2 md:order-1">
+            <div className="font-mono text-xs text-primary mb-6 flex items-center gap-2">
+              <span className="h-2 w-2 rounded-full bg-primary glow" />
+              <span>STATUS: AVAILABLE FOR DEPLOYMENT</span>
+            </div>
 
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
-          Hi, I'm{" "}
-          <span className="text-primary text-glow">Roseanne</span>,
-          <br />
-          an IT Support &amp;{" "}
-          <span className="relative inline-block">
-            <span className="relative z-10">Computer Systems</span>
-            <span className="absolute inset-x-0 bottom-1 h-3 bg-primary/20 -z-0" />
-          </span>{" "}
-          Servicing Specialist.
-        </h1>
+            <p className="font-mono text-sm text-muted-foreground mb-4">
+              <span className="text-primary">$</span> whoami
+            </p>
 
-        <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
-          {portfolio.subheadline}
-        </p>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+              Hi, I'm{" "}
+              <span className="text-primary text-glow">Roseanne</span>,
+              <br />
+              an IT Support &amp;{" "}
+              <span className="relative inline-block">
+                <span className="relative z-10">Computer Systems</span>
+                <span className="absolute inset-x-0 bottom-1 h-3 bg-primary/20 -z-0" />
+              </span>{" "}
+              Servicing Specialist.
+            </h1>
 
-        <div className="mt-10 flex flex-wrap gap-4">
-          <a
-            href="#skills"
-            className="group inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-semibold hover:glow transition-all"
-          >
-            <span>./explore_skills</span>
-            <ArrowIcon />
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border hover:border-primary hover:text-primary font-mono text-sm font-semibold transition"
-          >
-            <span>./contact_me</span>
-          </a>
-        </div>
+            <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
+              {portfolio.subheadline}
+            </p>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
-          <Stat label="Specialization" value="IT Support" />
-          <Stat label="Discipline" value="CSS NC II" />
-          <Stat label="Focus" value="Hands-On" />
-          <Stat label="Mode" value="On/Off-site" />
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#skills"
+                className="group inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-semibold hover:glow transition-all"
+              >
+                <span>./explore_skills</span>
+                <ArrowIcon />
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-border hover:border-primary hover:text-primary font-mono text-sm font-semibold transition"
+              >
+                <span>./contact_me</span>
+              </a>
+            </div>
+
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+              <Stat label="Specialization" value="IT Support" />
+              <Stat label="Discipline" value="CSS NC II" />
+              <Stat label="Focus" value="Hands-On" />
+              <Stat label="Mode" value="On/Off-site" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
