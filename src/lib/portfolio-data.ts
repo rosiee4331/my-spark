@@ -23,7 +23,7 @@ export const portfolio = {
       "Ethernet Cable Splicing (Crimping)",
     ],
     "Software / OS": [
-      "Windows & Linux Installation",
+      "Windows Installation",
       "Driver Deployment",
       "Server Configuration",
     ],
