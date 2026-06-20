@@ -213,7 +213,7 @@ function Experience() {
                 <div className="mt-5 flex flex-wrap gap-2">
                   {c.stack.map((s) => (
                     <span key={s} className="font-mono text-[11px] text-primary">
-                      {`[${s}]`}
+                      {s === "Linux" ? "\n" : `[${s}]`}
                     </span>
                   ))}
                 </div>
