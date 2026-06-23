@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { portfolio } from "@/lib/portfolio-data";
 import { SparklesBackground } from "@/components/SparklesBackground";
-import photoAsset from "@/assets/roseanne-photo-smartcasual.png";
+import photoAsset from "@/assets/roseanne-photo-purple.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
