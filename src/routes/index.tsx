@@ -90,22 +90,21 @@ function Hero() {
       <div className="absolute top-1/3 -left-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
       <div className="absolute bottom-0 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-32 md:pt-32 md:pb-40">
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          {/* Photo */}
-          <div className="shrink-0 order-1 md:order-2">
-            <div className="relative group">
-              <div className="absolute -inset-3 rounded-2xl bg-primary/25 blur-2xl opacity-60 group-hover:opacity-80 transition" />
-              <img
-                src={photoAsset}
-                alt="Roseanne Joy G. Habolin"
-                className="relative w-56 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl"
-              />
-            </div>
+      <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-32 md:pt-20 md:pb-40">
+        {/* Centered featured photo */}
+        <div className="flex justify-center mb-12 md:mb-16">
+          <div className="relative group">
+            <div className="absolute -inset-6 rounded-full bg-primary/30 blur-3xl opacity-70 group-hover:opacity-90 transition" />
+            <img
+              src={photoAsset}
+              alt="Roseanne Joy G. Habolin"
+              className="relative w-56 md:w-72 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl bg-background/20 backdrop-blur-sm"
+            />
           </div>
+        </div>
 
-          {/* Text */}
-          <div className="flex-1 order-2 md:order-1">
+        <div className="flex flex-col items-center text-center">
+          <div className="w-full max-w-4xl">
             <div className="font-mono text-xs text-primary mb-6 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-primary glow" />
               <span>STATUS: AVAILABLE FOR DEPLOYMENT</span>
