@@ -63,10 +63,13 @@ function Nav() {
           <span className="text-foreground">{portfolio.name.toLowerCase().replace(/\s+/g, "_")}</span>
           <span className="cursor-blink text-primary">▍</span>
         </a>
-        <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-wider">
+        <nav className="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wider">
+          <a href="#top" className="text-muted-foreground hover:text-primary transition">00. Home</a>
           <a href="#skills" className="text-muted-foreground hover:text-primary transition">01. Skills</a>
           <a href="#experience" className="text-muted-foreground hover:text-primary transition">02. Experience</a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary transition">03. Contact</a>
+          <a href="#resume" className="text-muted-foreground hover:text-primary transition">03. Resume</a>
+          <a href="#ai-learnings" className="text-muted-foreground hover:text-primary transition">04. AI</a>
+          <a href="#contact" className="text-muted-foreground hover:text-primary transition">05. Contact</a>
         </nav>
         <button
           onClick={toggle}
