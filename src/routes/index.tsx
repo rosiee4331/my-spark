@@ -126,11 +126,11 @@ function Hero() {
               Servicing Specialist.
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 mx-auto max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
               {portfolio.subheadline}
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a
                 href="#skills"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-semibold hover:glow transition-all"
@@ -146,7 +146,7 @@ function Hero() {
               </a>
             </div>
 
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+            <div className="mt-16 mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
               <Stat label="Specialization" value="IT Support" />
               <Stat label="Discipline" value="CSS NC II" />
               <Stat label="Focus" value="Hands-On" />
