@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
 import { portfolio } from "@/lib/portfolio-data";
 import { SparklesBackground } from "@/components/SparklesBackground";
-import photoAsset from "@/assets/roseanne-photo-transparent.png";
+import photoAsset from "@/assets/roseanne-photo-smartcasual.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -63,10 +63,13 @@ function Nav() {
           <span className="text-foreground">{portfolio.name.toLowerCase().replace(/\s+/g, "_")}</span>
           <span className="cursor-blink text-primary">▍</span>
         </a>
-        <nav className="hidden md:flex items-center gap-8 font-mono text-xs uppercase tracking-wider">
+        <nav className="hidden md:flex items-center gap-6 font-mono text-xs uppercase tracking-wider">
+          <a href="#top" className="text-muted-foreground hover:text-primary transition">00. Home</a>
           <a href="#skills" className="text-muted-foreground hover:text-primary transition">01. Skills</a>
           <a href="#experience" className="text-muted-foreground hover:text-primary transition">02. Experience</a>
-          <a href="#contact" className="text-muted-foreground hover:text-primary transition">03. Contact</a>
+          <a href="#resume" className="text-muted-foreground hover:text-primary transition">03. Resume</a>
+          <a href="#ai-learnings" className="text-muted-foreground hover:text-primary transition">04. AI</a>
+          <a href="#contact" className="text-muted-foreground hover:text-primary transition">05. Contact</a>
         </nav>
         <button
           onClick={toggle}
@@ -87,22 +90,21 @@ function Hero() {
       <div className="absolute top-1/3 -left-32 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
       <div className="absolute bottom-0 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-32 md:pt-32 md:pb-40">
-        <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16">
-          {/* Photo */}
-          <div className="shrink-0 order-1 md:order-2">
-            <div className="relative group">
-              <div className="absolute -inset-3 rounded-2xl bg-primary/25 blur-2xl opacity-60 group-hover:opacity-80 transition" />
-              <img
-                src={photoAsset}
-                alt="Roseanne Joy G. Habolin"
-                className="relative w-56 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl"
-              />
-            </div>
+      <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-32 md:pt-20 md:pb-40">
+        {/* Centered featured photo */}
+        <div className="flex justify-center mb-12 md:mb-16">
+          <div className="relative group">
+            <div className="absolute -inset-6 rounded-full bg-primary/30 blur-3xl opacity-70 group-hover:opacity-90 transition" />
+            <img
+              src={photoAsset}
+              alt="Roseanne Joy G. Habolin"
+              className="relative w-56 md:w-72 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl bg-background/20 backdrop-blur-sm"
+            />
           </div>
+        </div>
 
-          {/* Text */}
-          <div className="flex-1 order-2 md:order-1">
+        <div className="flex flex-col items-center text-center">
+          <div className="w-full max-w-4xl">
             <div className="font-mono text-xs text-primary mb-6 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-primary glow" />
               <span>STATUS: AVAILABLE FOR DEPLOYMENT</span>
@@ -124,11 +126,11 @@ function Hero() {
               Servicing Specialist.
             </h1>
 
-            <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 mx-auto max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
               {portfolio.subheadline}
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
               <a
                 href="#skills"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-semibold hover:glow transition-all"
@@ -144,7 +146,7 @@ function Hero() {
               </a>
             </div>
 
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+            <div className="mt-16 mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
               <Stat label="Specialization" value="IT Support" />
               <Stat label="Discipline" value="CSS NC II" />
               <Stat label="Focus" value="Hands-On" />
