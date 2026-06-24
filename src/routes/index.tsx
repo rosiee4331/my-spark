@@ -91,20 +91,8 @@ function Hero() {
       <div className="absolute bottom-0 -right-32 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
 
       <div className="relative mx-auto max-w-6xl px-6 pt-16 pb-32 md:pt-20 md:pb-40">
-        {/* Centered featured photo */}
-        <div className="flex justify-center mb-12 md:mb-16">
-          <div className="relative group">
-            <div className="absolute -inset-6 rounded-full bg-primary/30 blur-3xl opacity-70 group-hover:opacity-90 transition" />
-            <img
-              src={photoAsset}
-              alt="Roseanne Joy G. Habolin"
-              className="relative w-56 md:w-72 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl bg-background/20 backdrop-blur-sm"
-            />
-          </div>
-        </div>
-
-        <div className="flex flex-col items-center text-center">
-          <div className="w-full max-w-4xl">
+        <div className="flex flex-col md:flex-row md:items-center gap-12 md:gap-16">
+          <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
             <div className="font-mono text-xs text-primary mb-6 flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-primary glow" />
               <span>STATUS: AVAILABLE FOR DEPLOYMENT</span>
@@ -126,11 +114,11 @@ function Hero() {
               Servicing Specialist.
             </h1>
 
-            <p className="mt-8 mx-auto max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="mt-8 max-w-2xl text-lg md:text-xl text-muted-foreground leading-relaxed">
               {portfolio.subheadline}
             </p>
 
-            <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-4">
               <a
                 href="#skills"
                 className="group inline-flex items-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-semibold hover:glow transition-all"
@@ -145,16 +133,29 @@ function Hero() {
                 <span>./contact_me</span>
               </a>
             </div>
+          </div>
 
-            <div className="mt-16 mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
-              <Stat label="Specialization" value="IT Support" />
-              <Stat label="Discipline" value="CSS NC II" />
-              <Stat label="Focus" value="Hands-On" />
-              <Stat label="Mode" value="On/Off-site" />
+          {/* Photo beside the description, same size */}
+          <div className="flex md:block justify-center md:flex-shrink-0 md:self-end">
+            <div className="relative group">
+              <div className="absolute -inset-6 rounded-full bg-primary/30 blur-3xl opacity-70 group-hover:opacity-90 transition" />
+              <img
+                src={photoAsset}
+                alt="Roseanne Joy G. Habolin"
+                className="relative w-56 md:w-72 h-auto rounded-2xl border-2 border-primary/40 shadow-2xl bg-background/20 backdrop-blur-sm"
+              />
             </div>
           </div>
         </div>
+
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+          <Stat label="Specialization" value="IT Support" />
+          <Stat label="Discipline" value="CSS NC II" />
+          <Stat label="Focus" value="Hands-On" />
+          <Stat label="Mode" value="On/Off-site" />
+        </div>
       </div>
+
     </section>
   );
 }
