@@ -258,20 +258,37 @@ function Experience() {
   );
 }
 
+// Formspree endpoint — receives submissions and forwards to roseanne.habolin@rotaryclubmakati.org
+// To activate: sign up at https://formspree.io, create a form with that email,
+// then replace YOUR_FORM_ID below with the ID Formspree gives you (e.g. "mrbgvzpk").
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
 function Contact() {
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const subject = encodeURIComponent(`Portfolio inquiry from ${form.get("name")}`);
-    const body = encodeURIComponent(
-      `From: ${form.get("name")} <${form.get("email")}>\n\n${form.get("message")}`,
-    );
-    window.location.href = `mailto:${portfolio.email}?subject=${subject}&body=${body}`;
-    setStatus("sent");
-    toast.success("Message received!", {
-      description: "I'll get back to you shortly.",
-    });
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
+    setStatus("sending");
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: form,
+      });
+      if (!res.ok) throw new Error(`Formspree responded ${res.status}`);
+      setStatus("sent");
+      formEl.reset();
+      toast.success("Message received!", {
+        description: "I'll get back to you shortly.",
+      });
+    } catch (err) {
+      console.error("Contact form submit failed", err);
+      setStatus("idle");
+      toast.error("Couldn't send message", {
+        description: "Please try again or email me directly.",
+      });
+    }
   };
 
   return (
