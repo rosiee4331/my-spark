@@ -351,9 +351,14 @@ function Contact() {
             />
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-semibold hover:glow transition"
+              disabled={status === "sending"}
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-mono text-sm font-semibold hover:glow transition disabled:opacity-60"
             >
-              {status === "sent" ? "// message queued ✓" : "./send_message"}
+              {status === "sent"
+                ? "// message queued ✓"
+                : status === "sending"
+                  ? "// sending..."
+                  : "./send_message"}
             </button>
           </form>
         </div>
