@@ -402,7 +402,7 @@ function Resume() {
   return (
     <section id="resume" className="relative py-24 md:py-32 border-t border-border">
       <div className="mx-auto max-w-6xl px-6">
-        <SectionHeader index="03" title="Resume" subtitle="// roseanne joy g. habolin — ai trainee" />
+        <SectionHeader index="03" title="Resume" subtitle="// roseanne joy g. habolin — IT Support & AI Specialist" />
 
         <div className="mt-12 rounded-xl border border-border bg-card p-6 md:p-8">
           <p className="text-base md:text-lg leading-relaxed text-muted-foreground">
