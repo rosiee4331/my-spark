@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState, type FormEvent } from "react";
+import { toast } from "sonner";
+
 import { portfolio } from "@/lib/portfolio-data";
 import { SparklesBackground } from "@/components/SparklesBackground";
 import photoAsset from "@/assets/roseanne-photo-purple.png";
@@ -267,12 +269,15 @@ function Contact() {
     );
     window.location.href = `mailto:${portfolio.email}?subject=${subject}&body=${body}`;
     setStatus("sent");
+    toast.success("Message received!", {
+      description: "I'll get back to you shortly.",
+    });
   };
 
   return (
     <section id="contact" className="relative py-24 md:py-32 border-t border-border">
       <div className="mx-auto max-w-4xl px-6">
-        <SectionHeader index="03" title="Open a Connection" subtitle="// let's build something" />
+        <SectionHeader index="05" title="Open a Connection" subtitle="// let's build something" />
 
         <div className="mt-16 grid gap-10 md:grid-cols-[1fr_1.2fr]">
           <div>
@@ -289,7 +294,30 @@ function Contact() {
                 <span>{portfolio.email}</span>
               </a>
             </div>
+
+            <div className="mt-6 rounded-xl border border-border bg-card/60 p-5 font-mono text-xs backdrop-blur">
+              <div className="flex items-center justify-between border-b border-border/60 pb-2">
+                <span className="text-muted-foreground">// system_diagnostics</span>
+                <span className="flex items-center gap-2 text-primary">
+                  <span className="relative flex h-2 w-2">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                    <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+                  </span>
+                  online
+                </span>
+              </div>
+              <ul className="mt-3 space-y-1.5 text-muted-foreground">
+                <li className="flex justify-between"><span>status</span><span className="text-primary">available_for_hire</span></li>
+                <li className="flex justify-between"><span>response_time</span><span className="text-foreground">&lt; 24h</span></li>
+                <li className="flex justify-between"><span>location</span><span className="text-foreground">PH · remote/onsite</span></li>
+                <li className="flex justify-between"><span>uptime</span><span className="text-foreground">99.9%</span></li>
+              </ul>
+              <div className="mt-3 border-t border-border/60 pt-2 text-primary">
+                &gt; ready to connect<span className="cursor-blink">_</span>
+              </div>
+            </div>
           </div>
+
 
           <form
             onSubmit={onSubmit}
