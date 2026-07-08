@@ -259,9 +259,7 @@ function Experience() {
 }
 
 // Formspree endpoint — receives submissions and forwards to roseanne.habolin@rotaryclubmakati.org
-// To activate: sign up at https://formspree.io, create a form with that email,
-// then replace YOUR_FORM_ID below with the ID Formspree gives you (e.g. "mrbgvzpk").
-const FORMSPREE_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xbdvbbda";
 
 function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
